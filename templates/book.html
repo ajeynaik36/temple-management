@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <style>
+  body{
+    background-image: url(../static/contactus.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 900px;
+    width: 100%;
+  }
+  h1{
+    padding-left: 50px;
+    font-weight: bold;
+    color:brown;
+    font-size: 50px;
+  }
+  table
+  {
+
+    border-collapse: collapse;
+    background-color: white;
+    font-size: 15px;
+    font-weight: bold;
+    width: 35%;
+    height: auto;
+  }
+  .button{
+     width: 50px;
+     margin-top: 5px;
+     cursor: pointer;
+     background-color: darkgrey;
+  }
+  thead{
+    background-color: skyblue;
+  }
+  td{
+
+    font-size: 15px;
+    font-weight: bold;
+  }
+  button:hover{
+    background: pink;
+    transition: 0.5s;
+  }
+  </style>
+  <body>
+<h1>Hello {{x}}</h1><br><br><br>
+<center>
+    <table border="2">
+    <thead>
+    <tr>
+        <th>Pooja</th>
+        <th>Price</th>
+        <th>Confirm</th>
+
+    </tr>
+    </thead>
+    <tbody>
+        {%for row in names%}
+            <tr>
+                <td><center>{{row[0]}}</center></td>
+                <td> <center>{{row[1]}}</center></td>
+
+
+                <td><center><button class="button" type="button" onclick="alert('You booked:{{row[0]}} Pooja.')" id="booked">Book</button></center></td>
+            </tr>
+
+        {%endfor%}
+    </tbody>
+    </table>
+<h2><a href="{{url_for('home')}}" style="color:white;font-size:30px">Go to Home Page</a></h2>
+</center>
+  </body>
+</html>

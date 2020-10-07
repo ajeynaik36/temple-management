@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="../static/index.css">
+    <title>Register</title>
+  </head>
+  <style>
+  body{
+    background-image: url(../static/durgaA.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+  }
+  /*Form stytle*/
+  /*Form stytle*/
+  form{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, .4);
+    padding: 20px;
+    border-radius: 45px;
+  }
+  form label{
+    display: block;
+    color: white;
+    font-size: 20px;
+    margin-bottom: 1px;
+    cursor: pointer;
+  }
+  form input,select{
+    font-size: 18px;
+    padding: 7px;
+    width: 100%;
+    border: 1px solid #AAAFFF;
+    color: #00008B;
+    display: block;
+    background: transparent;
+  }
+  form input[type="submit"]{
+     width: 120px;
+     margin-top: 10px;
+     cursor: pointer;
+     background-color: lightpink;
+  }
+  option{
+    color: #000;
+}
+  form p{
+    color: #FFF;
+    font-size: 17px;
+  }
+  font p a{
+    color: #00008B;
+    font-size: 20px;
+    text-transform: capitalize;
+    cursor: pointer;
+  }
+
+  form input[type="submit"]:hover{
+    background: red;
+    transition: 0.5s;
+  }
+/*footer style*/
+
+footer .footer-bottom{
+  background: #343a40;
+  color: #686868;
+  height: 50px;
+  text-align: center;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  padding-top: 20px;
+  width: 100%;
+}
+  </style>
+  <body>
+    <nav>
+     <label class="logo">Temple</label>
+     <ul>
+       <li><a href="{{url_for('home')}}">Home</a></li>
+       <li><a class="active">Registration</a></li>
+       <li><a href="{{url_for('b')}}">Login</a></li>
+       <li><a href="{{url_for('c')}}">Contact Us</a></li>
+
+     </ul>
+    </nav>
+    <h1 style="font-family:Castellar"> Registration </h1>
+
+  <form method="post" action="{{url_for("read")}}">
+
+    <label for="user" style="font-family:Berlin Sans FB">Username</lable>
+      <input type="text" name="name" id="user">
+      <lable for="email">Email</label>
+       <input type="email" name="email" id="email">
+       <label for="pass" style="font-family:Berlin Sans FB">Password</label>
+       <input type="password" name="password" id="pass">
+       <label for="phone" style="font-family:Berlin Sans FB">Phone</label>
+       <input type="tel" name="number" id="phone">
+       <label for="phone" style="font-family:Berlin Sans FB">Address</label>
+       <input type="text" name="add" id="phone">
+
+
+       <center>
+       <input type="submit" name="submit" value="Register"></center>
+         <p>Already registered?Signin. <a class="ll" href="{{url_for('b')}}" >Login</a>
+    </form>
+    <br><br>
+    <footer class="footer">
+      <div class="footer-bottom">
+        &copy; Google.com| Designed by Ashwnini Bhat</div>
+
+    </footer>
+  </body>
+</html>

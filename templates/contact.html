@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Who we are.</title>
+    <link rel="stylesheet" type="text/css" href="../static/index.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <style>
+  body{
+    background-image: url(../static/register.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+  }
+  h1
+  {
+    color: slateblue;
+    font-size: 40px;
+    font-weight: bold;
+    margin-bottom: 2px;
+
+  }
+  h3{
+    margin-top: 0px;
+  }
+  input[type=text],select,textarea{
+    padding:12px;
+    width: 80%;
+    border-radius: 10px;
+    box-sizing: border-box;
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+  input[type="submit"]{
+    background: #ff6347;
+    color: white;
+    border-style: outset;
+    border-color: black;
+    height: 40px;
+    width: 130px;
+    font: bold 15px arial, sans-serif;
+    text-shadow:none;
+    cursor: pointer;
+    transition: 0.6s ease;
+  }
+  input[type=submit]:hover{
+    color: #255784;
+    background: #8b0000;
+    box-shadow: 0 0 10px #b22222,0 0 40px #b22222,0 0 80px #b22222
+  }
+  form
+  {
+    position: relative;
+    top: 55%;
+    left: 35%;
+    border-radius: 5px;
+    background: rgba(205,92,92,0.5);
+    padding:20px;
+    max-width: 35%;
+  }
+
+  </style>
+  <body>
+    <nav>
+     <label class="logo">Temple</label>
+     <ul>
+       <li><a href="{{url_for('home')}}">Home</a></li>
+       <li><a href="{{url_for('a')}}">Registration</a></li>
+       <li><a href="{{url_for('b')}}">Login</a></li>
+       <li><a class="active" href="#">About Us</a></li>
+     </ul>
+    </nav>
+    <div class="contact-container">
+      <marquee width="100%" direction="left" height="80px">
+      <h1>Contact Form</h1></marquee>
+      <form action="#" >
+    <label for="fname">First Name</label><br>
+    <input type="text" id="fname" name="fname" placeholder="Your first name"><br>
+
+    <label for="lname">Last Name</label><br>
+    <input type="text" id="lname" name="lname" placeholder="Your last name"><br>
+
+    <label for="country" >Country</label><br>
+    <select id="country" name="country">
+      <option value="India">India</option>
+      <option value="USA">USA</option>
+      <option value="China">China</option>
+    </select>
+    <br>
+    <label for="msg">Message</label><br>
+    <textarea id="msg" name="msg" placeholder="Write Message here" rows="10" cols="30"></textarea>
+      <br><center>
+    <input type="submit" name="submit" value="Submit" onclick="alert('Query sent succesully.') ; window.location.href = '{{url_for('home')}}'"></center>
+  </form>
+</div>
+
+
+  </body>
+</html>
